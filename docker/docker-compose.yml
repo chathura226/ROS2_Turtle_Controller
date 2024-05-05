@@ -1,0 +1,12 @@
+version: '3' #docker version
+services:
+  ros_service:
+    build: 
+      context: ./ros
+      dockerfile: Dockerfile
+    command: tail -f /dev/null # to run container indefinetly
+    environment: 
+      - DISPLAY=host.docker.internal:0.0
+    volumes: 
+      - "../src/:/root/ros2_ws/src/" 
+      #/root is same as ~

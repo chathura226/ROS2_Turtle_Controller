@@ -10,7 +10,7 @@ class PoseSubscriberNode(Node):
 
 
     def pose_callback(self,msg:Pose):
-        self.get_logger().info("("+str(msg.x)+","+str(msg.y)+")")
+        self.get_logger().info("("+str(msg.x)+","+str(msg.y)+","+str(msg.theta)+")")
 
 def main(args=None):
     rclpy.init(args=args)

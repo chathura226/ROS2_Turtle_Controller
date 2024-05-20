@@ -3,9 +3,9 @@ This ROS2 project is to demonstrate basic usage of ROS2 colcon workspace and ROS
 
 ## Controlling turtlesim node using a custom package
 
-```
+
 In this project I have created a package that can interact with turtlesim node using various methods
-```
+
 - Usage of 'Topics' to create custom publishers, subscribers to control turtle
 - Usage of 'Service; to change settings of turtle
 

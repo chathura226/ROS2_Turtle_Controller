@@ -1,0 +1,19 @@
+version: '3' #docker version
+services:
+  ros_service:
+    build: 
+      context: ./ros
+      dockerfile: Dockerfile
+    command: tail -f /dev/null # to run container indefinetly
+    environment: 
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/tmp/.docker.xauth
+    volumes: 
+      - "../src/:/root/ros2_ws/src/" 
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "/tmp/.docker.xauth:/tmp/.docker.xauth"
+    privileged: true
+    network_mode: "host"
+    stdin_open: true
+    tty: true

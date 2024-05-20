@@ -1,4 +1,4 @@
-﻿# ROS2_First_Project
+﻿# ROS2_Turtle_Controller
 This ROS2 project is to demonstrate basic usage of ROS2 colcon workspace and ROS2 topic,services,nodes.
 
 ## Controlling turtlesim node using a custom package
